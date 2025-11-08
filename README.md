@@ -97,6 +97,3 @@ Gabriel Amaral – Back-end (Spring Boot)
 Riquelme Teixeira – Front-end (HTML, CSS, JS)
 
 Projeto criado com fins educacionais e demonstrativos para a loja Pijamoon 🌙✨
-
-
-aaaaaaaaaaaaaaaaaaaa
