@@ -117,6 +117,7 @@ a {
 .header-text h1 {
     margin-top: 30%;
     font-size: 90px;
+    
 }
 
 .header-text span {
@@ -167,6 +168,7 @@ a {
     font-size: 70px;
     line-height: 80px;
     margin-bottom: 40px;
+    overflow-y: hidden;
 }
 
 .geral-title span {
@@ -268,6 +270,11 @@ a {
     color: #ffffff;
 }
 
+.colecao .rate {
+    color: #ffbb00;
+    font-size: 25px;
+}
+
 /*BENEFICIOS*/
 
 .section-beneficios {
@@ -318,7 +325,6 @@ a {
 .card:hover {
     background-color: #3A66C1;
     border-color: #A8B8FF;
-
     transform: translateY(-8px);
 }
 
@@ -332,10 +338,9 @@ a {
 
 .custom-shape-divider-bottom-1762602606 {
     position: absolute;
-    bottom: 0; /* <-- muda de top: 0 para bottom: 0 */
+    bottom: 0;
     left: 0;
     width: 100%;
-    overflow: hidden;
     line-height: 0;
 
 }
@@ -351,3 +356,107 @@ a {
 .custom-shape-divider-bottom-1762602606 .shape-fill {
     fill: #2C5EA8 /* cor da curva */
 }
+
+
+/*FORMULARIO*/
+
+ label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      font-family: inherit;
+    }
+
+    button {
+      width: 100%;
+      background-color: #25d366;
+      color: white;
+      border: none;
+      padding: 0.9rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #1ebd5a;
+    }
+
+
+    /* CONTATO -PAGINA2*/
+
+    .contato-container {
+      margin-top: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .contato-container h1 {
+      font-size: 60px;
+      color: #2C5EA8;
+      margin-bottom: 10px;
+    }
+
+    .contato-container p {
+      font-size: 22px;
+      color: #333;
+      max-width: 700px;
+      margin-bottom: 40px;
+    }
+
+    .formulario {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 2rem;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .formulario label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+      color: #2A2A2A;
+      text-align: left;
+    }
+
+    .formulario input,
+    .formulario textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      font-family: inherit;
+    }
+
+    .formulario button {
+      width: 100%;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      padding: 0.9rem;
+      border-radius: 999px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .formulario button:hover {
+      background-color: #1EBE5C;
+      transform: scale(1.03);
+    }
