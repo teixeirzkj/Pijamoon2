@@ -499,3 +499,10 @@ footer .logo span {
   background-color: #3A66C1;
   transform: scale(1.05);
 }
+
+.coluna {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}

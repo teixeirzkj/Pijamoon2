@@ -1,0 +1,76 @@
+
+/* Celulares pequenos (até 480px) */
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+
+  .header-text {
+    margin-left: 20px;
+  }
+
+  .header-text h1 {
+    font-size: 34px;
+  }
+
+  .header-text button {
+    padding: 0.6rem 0.8rem;
+    width: auto;
+    font-size: 14px;
+  }
+
+  .header-text p {
+    font-size: 14px;
+  }
+
+  /* SOBRE */
+  .geral-title {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .geral-title h1 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .geral-p p {
+    width: 90%;
+    max-width: 320px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .sobre {
+    margin-bottom: -80px;
+  }
+
+  /* COLEÇÃO */
+  .coluna {
+    display: grid; /* <<< usa grid, mais estável */
+    grid-template-columns: repeat(1, 1fr); /* <<< 2 produtos por linha */
+    gap: 20px;
+    justify-items: center; /* centraliza os produtos no grid */
+    padding: 0 10px;
+  }
+
+  .product {
+    width: 100%;
+    margin-right: 50px;
+    max-width: 180px; /* controla tamanho dos cards */
+    text-align: center;
+  }
+
+  .product .img-product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .p-product {
+    font-size: 0.95rem;
+  }
+
+  .p-price {
+    font-size: 1rem;
+  }
+}
