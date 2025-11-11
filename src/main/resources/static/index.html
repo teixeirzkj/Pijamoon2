@@ -81,7 +81,11 @@
 
                 <div class="coluna coluna-4">
 
-                    <div class="product">
+                    <div class="product"
+                    data-nome="Pijama Feminino Confort"
+                    data-preco="199,00"
+                    data-descricao="Conjunto de pijama feminino em algodão macio, ideal para noites de conforto e estilo."
+                    data-imagem="media/produto1.jpg">
                         <div class="img-product">
                             <img src="media/produto1.jpg" alt="product">
                         </div> <!--PRODUCT-->
@@ -92,7 +96,11 @@
                         <div class="p-price"><span>R$ </span>199,00</div> <!--PREÇO PRODUTO-->
                     </div>
 
-                    <div class="product">
+                    <div class="product"
+                    data-nome="Pijama Feminino Confort"
+                    data-preco="199,00"
+                    data-descricao="Conjunto de pijama feminino em algodão macio, ideal para noites de conforto e estilo."
+                    data-imagem="media/produto10.jpg">
                         <div class="img-product">
                             <img src="media/produto10.jpg" alt="product">
                         </div> <!--PRODUCT-->
@@ -103,7 +111,11 @@
                         <div class="p-price"><span>R$ </span>199,00</div> <!--PREÇO PRODUTO-->
                     </div>
 
-                    <div class="product">
+                    <div class="product"
+                    data-nome="Pijama Feminino Confort"
+                    data-preco="199,00"
+                    data-descricao="Conjunto de pijama feminino em algodão macio, ideal para noites de conforto e estilo."
+                    data-imagem="media/produto2.jpg">
                         <div class="img-product">
                             <img src="media/produto2.jpg" alt="product">
                         </div> <!--PRODUCT-->
@@ -114,7 +126,11 @@
                         <div class="p-price"><span>R$ </span>199,00</div> <!--PREÇO PRODUTO-->
                     </div>
 
-                    <div class="product">
+                    <div class="product"
+                    data-nome="Pijama Feminino Confort"
+                    data-preco="199,00"
+                    data-descricao="Conjunto de pijama feminino em algodão macio, ideal para noites de conforto e estilo."
+                    data-imagem="media/produto3.jpg">
                         <div class="img-product">
                             <img src="media/produto3.jpg" alt="product">
                         </div> <!--PRODUCT-->
@@ -231,5 +247,30 @@
     </section>
 
 </main>
+
+<script>
+  // Seleciona todos os produtos da página
+  const produtos = document.querySelectorAll(".product");
+
+  produtos.forEach(produto => {
+    produto.addEventListener("click", () => {
+      // Captura os dados diretamente dos atributos do HTML
+      const dados = {
+        nome: produto.dataset.nome,
+        preco: produto.dataset.preco,
+        descricao: produto.dataset.descricao,
+        imagem: produto.dataset.imagem
+      };
+
+      // Salva no localStorage (memória temporária do navegador)
+      localStorage.setItem("produtoSelecionado", JSON.stringify(dados));
+
+      // Redireciona para a página de produto
+      window.location.href = "produto.html";
+    });
+  });
+</script>
+
+
 </body>
 </html>

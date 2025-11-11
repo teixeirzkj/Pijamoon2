@@ -22,3 +22,35 @@ async function carregarProdutos() {
 }
 
 carregarProdutos();
+
+/**/ 
+
+
+const produtos = {
+  produto1: {
+    nome: "Pijama Feminino Confort",
+    preco: "199,00",
+    descricao:
+      "Conjunto de pijama feminino em algodão macio, ideal para noites de conforto e estilo. Tecido respirável e toque suave na pele.",
+    imagem: "media/produto1.jpg"
+  },
+  produto2: {
+    nome: "Pijama Feminino Rosa",
+    preco: "189,00",
+    descricao:
+      "Pijama rosa em tecido leve com design elegante. Proporciona conforto absoluto nas noites frias e quentes.",
+    imagem: "media/produto2.jpg"
+  }
+};
+
+// Função chamada ao clicar em um produto
+function verProduto(id) {
+  // Salva os dados do produto no localStorage (memória temporária do navegador)
+  localStorage.setItem("produtoSelecionado", JSON.stringify(produtos[id]));
+  // Vai para a página do produto
+  window.location.href = "produto.html";
+}
+
+
+/*PRODUTO*/ 
+
