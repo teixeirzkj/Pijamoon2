@@ -1,0 +1,484 @@
+/* Início: limitar todo este arquivo a telas pequenas */
+@media (max-width: 900px) {
+@media (max-width: 480px) {
+
+    /*MENU MOBILE*/
+
+header, .navbar {
+  overflow: visible !important;
+}
+
+/* posiciona o mobile-menu abaixo da navbar e acima do resto do conteúdo */
+.mobile-menu {
+  position: absolute;   /* fica posicionado em relação à navbar (que é fixed) */
+  top: 100%;            /* imediatamente abaixo da altura da navbar */
+  left: 0;
+  width: 100%;
+  display: none;        /* padrão: escondido */
+  z-index: 10001;       /* maior que o z-index da navbar (999) */
+  background-color: #1E2A38; /* ou a cor que quiser */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* quando aberto, exibe corretamente */
+.mobile-menu.open {
+  display: block;
+}
+
+/* caso use .menu ul (ou .menu-desktop ul) - padroniza posicionamento e z-index */
+.menu ul,
+.menu-desktop ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;      /* será mostrado pela classe active */
+  z-index: 10001;
+  background-color: #1E2A38;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* mostrar quando ativo (JS adiciona .active) */
+.menu ul.active,
+.menu-desktop ul.active {
+  display: flex;
+  flex-direction: column;
+}
+
+/* evita que algum ancestor 'apague' visual do menu por overflow */
+.container, .navbar > .container {
+  overflow: visible !important;
+}
+
+
+
+    /* NAVBAR */
+    .navbar {
+        height: 100px;
+    }
+
+    .navbar .logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .navbar .logo h1 {
+        font-size: 26px;
+    }
+
+    .navbar ul {
+        display: none; /* menu desktop some */
+    }
+
+    /* HEADER */
+    .header-bg {
+        height: 60vh;
+        padding: 1rem;
+        margin-top: 100px;
+    }
+
+    .header-text {
+        max-width: 100% !important;
+        height: auto;
+        padding: 0 1rem;
+    }
+
+    .header-text h1 {
+        font-size: 38px !important;
+        margin-top: 0 !important;
+    }
+
+    .header-text p {
+        font-size: 18px;
+    }
+
+    .header-text button {
+        width: 80%;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    /* SEÇÃO SOBRE */
+    .geral-title h1 {
+        font-size: 40px;
+        line-height: 46px;
+    }
+
+    .geral-p {
+        font-size: 18px;
+        padding: 0 1rem;
+    }
+
+    /* COLEÇÃO */
+    .coluna-4 {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 1rem;
+    }
+
+    .product .img-product img {
+        width: 260px;
+        height: 360px;
+        margin: 0 auto;
+    }
+
+    .p-product {
+        font-size: 18px;
+    }
+
+    .p-price {
+        font-size: 24px;
+    }
+
+    /* BENEFÍCIOS */
+    .cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .card h1 {
+        font-size: 26px;
+    }
+
+    .card p {
+        font-size: 18px;
+    }
+
+    /* FOOTER */
+    .footers {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer1, .footer2, .footer3 {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* PÁGINA DE PRODUTO */
+    .product-detail {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .product-image img {
+        width: 90%;
+    }
+
+    .product-info h1 {
+        font-size: 30px;
+    }
+
+    .product-info .price {
+        font-size: 26px;
+    }
+
+    .product-info .desc {
+        font-size: 16px;
+    }
+}
+
+/* ========== TABLET (481PX — 900PX) ========== */
+@media (max-width: 900px) {
+
+    
+    /* NAVBAR */
+    .navbar {
+        height: 100px;
+    }
+
+    .navbar .logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .navbar .logo h1 {
+        font-size: 26px;
+    }
+
+    .navbar ul {
+        display: none; /* menu desktop some */
+    }
+
+    /* HEADER */
+    .header-bg {
+        height: 70vh;
+        padding: 1.5rem;
+    }
+
+    .header-text h1 {
+        font-size: 55px;
+    }
+
+    .header-text p {
+        font-size: 22px;
+    }
+
+    /* COLEÇÃO */
+    .coluna-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product .img-product img {
+        width: 280px;
+        height: 380px;
+    }
+
+    /* BENEFÍCIOS */
+    .card {
+        width: 70%;
+    }
+
+    /* PÁGINA DE PRODUTO */
+    .product-detail {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-image img {
+        width: 75%;
+    }
+}
+
+/* ========== DESKTOP GRANDE (1200PX+) ========== */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1300px;
+    }
+}
+
+
+/* ===========================
+   📱 RESPONSIVIDADE 390PX
+   =========================== */
+@media (max-width: 390px) {
+
+    * {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        overflow-x: hidden !important;
+    }
+
+    /* NAVBAR */
+
+    .menu ul {
+        flex-direction: column;
+        display:none;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        z-index: 9999;
+    }
+
+    
+
+    .menu ul li {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .menu ul li a {
+    color: white;
+    font-size: 22px;
+}
+
+    .menu ul li a:hover {
+    background-color: #004161;
+    border-radius: 5px;
+    color: white;
+}
+
+    .menu ul.active {
+    display: flex;
+}
+
+    header {
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between
+    }
+
+    .menumobile {
+        display: block;
+    }
+
+    .menumobile img {
+        width: 36px;
+        height: 36px;
+    }
+}
+ 
+    /* HEADER */
+    .header-bg {
+        height: 70vh;
+        margin-top: 115px;
+        background-position: center;
+        background-size: cover;
+        padding: 0 15px;
+    }
+
+    .header-text {
+        max-width: 100% !important;
+    }
+
+    .header-text h1 {
+        font-size: 42px;
+        margin-top: 15%;
+        line-height: 45px;
+        overflow: hidden;
+    }
+
+    .header-text p {
+        font-size: 16px;
+        margin-top: 10px;
+        font-weight: 600;
+    }
+
+    .header-text button {
+        width: 200px;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+    }
+
+
+    /* SOBRE */
+
+    .sobre-section {
+        margin-bottom: -30px;
+    }
+
+    .geral-title h1 {
+        font-size: 38px;
+        line-height: 40px;
+    }
+
+    .geral-p {
+        font-size: 16px;
+        padding: 0 14px;
+        line-height: 30px;
+    }
+
+
+    /* COLEÇÃO */
+    .product .img-product img {
+        width: 150px;
+        height: 220px;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    .p-product {
+        font-size: 16px;
+    }
+
+    .p-price {
+        font-size: 20px;
+    }
+
+    .coluna-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .colecao button {
+        width: 200px;
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+    }
+
+
+    /* BENEFÍCIOS */
+    .cards {
+        flex-direction: column;
+        margin-top: -20px;
+        margin-bottom: 50px;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        margin-bottom: 1px;
+    }
+
+    .card h1 {
+        font-size: 24px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    .card .icon {
+        font-size: 40px;
+    }
+
+
+    /* PRODUTO PÁGINA */
+    .product-detail {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .product-image img {
+        width: 260px;
+        height: auto;
+    }
+
+    .product-info h1 {
+        font-size: 32px;
+    }
+
+    .product-info .price {
+        font-size: 26px;
+    }
+
+    .product-info .desc {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .buy-btn {
+        width: 80%;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+
+    /* FOOTER */
+    footer {
+        padding: 20px 5px;
+    }
+
+    .footers {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer1, .footer2, .footer3 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    footer .logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    footer .logo h1 {
+        font-size: 28px;
+    }
+
+} /* fim do @media (max-width:900px) */
